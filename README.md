@@ -1,24 +1,33 @@
-# Neon Pac-Man
+<div align="center">
 
-A customizable neon arcade Pac-Man game built with React, TypeScript, Vite and Tailwind CSS, packaged as a Windows desktop app with Electron.
+# 🟡 Neon Pac-Man 👾
 
-Made by [Kazesikk](https://github.com/Kazesikk)
+### A classic arcade chase, reimagined in neon.
 
-## Features
+A customizable Pac-Man arcade game built with **React**, **TypeScript**, and **Vite**—with an offline-ready Windows desktop app powered by Electron.
 
-- Smooth arcade gameplay with ghosts, power pellets and bonus fruit
-- Settings panel for themes and colors (Pac-Man and ghost colors)
-- Sound effects and an original arcade-style music loop, with separate music and master volume
-- High score saved locally
-- Keyboard controls: Arrow keys or WASD
-- Desktop app: runs offline, `F11` toggles fullscreen
+[Play in your browser](#run-in-the-browser) · [Build for Windows](#build-for-windows) · [Controls](#controls)
 
-## Requirements
+</div>
 
-- [Node.js](https://nodejs.org/) 20 or newer
-- npm
+---
 
-## Getting started
+## ✨ Features
+
+- **Arcade action** — navigate the maze, evade ghosts, grab power pellets, and collect bonus fruit.
+- **Make it yours** — customize themes and the colors of Pac-Man and the ghosts.
+- **Sound with control** — enjoy arcade-style music and sound effects, with separate music and master volume settings.
+- **Keep your best score** — high scores and settings are saved locally.
+- **Play your way** — use the keyboard in your browser, or play offline in the Windows desktop app.
+
+## 🚀 Get started
+
+### Requirements
+
+- [Node.js](https://nodejs.org/) **20 or newer**
+- npm (included with Node.js)
+
+### Install
 
 ```bash
 git clone https://github.com/Kazesikk/neon-pacman.git
@@ -26,52 +35,63 @@ cd neon-pacman
 npm install
 ```
 
-### Run in the browser (dev mode)
+### Run in the browser
+
+Start the development server, then open the local URL printed in your terminal:
 
 ```bash
 npm run dev
 ```
 
-### Run as a desktop app
+### Run the desktop app
+
+Build the game and launch it in an Electron window:
 
 ```bash
 npm start
 ```
 
-This builds the game and opens it in an Electron window.
+### Build for Windows
 
-### Build a Windows installer
+Create a Windows installer in the `release/` folder:
 
 ```bash
 npm run dist
 ```
 
-The installer (`.exe`) is created in the `release/` folder.
-For a single portable `.exe` with no install step, use `npm run dist:portable`.
+Prefer a portable executable with no installation step?
 
-## Project structure
-
-```
-electron/main.cjs     Electron main process (window, external links)
-src/App.tsx           UI, HUD and screens
-src/game/engine.ts    Game loop, ghosts, rendering
-src/game/maze.ts      Maze layout
-src/game/settings.ts  Themes and saved settings
-src/game/audio.ts     Sound effects
-build/icon.png        App icon
+```bash
+npm run dist:portable
 ```
 
-## Controls
+## 🎮 Controls
 
 | Key | Action |
-| --- | --- |
-| Arrow keys / WASD | Move |
-| P | Pause |
-| M | Mute / unmute all sound |
-| - / + | Volume down / up |
-| Esc | Open the settings panel |
-| F11 | Toggle fullscreen (desktop app) |
+|:---|:---|
+| <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> | Move |
+| <kbd>P</kbd> | Pause / resume |
+| <kbd>M</kbd> | Mute / unmute all sound |
+| <kbd>-</kbd> / <kbd>+</kbd> | Decrease / increase volume |
+| <kbd>Esc</kbd> | Open settings |
+| <kbd>F11</kbd> | Toggle fullscreen in the desktop app |
 
-## License
+## 🧩 Project structure
 
-MIT - made by [Kazesikk](https://github.com/Kazesikk)
+```text
+electron/main.cjs     Electron main process and window setup
+src/App.tsx           Game UI, HUD, and screens
+src/game/engine.ts    Game loop, ghosts, and rendering
+src/game/maze.ts      Maze layout
+src/game/settings.ts  Themes and saved settings
+src/game/audio.ts     Music and sound effects
+build/icon.png        Desktop app icon
+```
+
+## 🛠️ Built with
+
+React · TypeScript · Vite · Tailwind CSS · Electron
+
+## 📄 License
+
+Released under the MIT License — made by [Kazesikk](https://github.com/Kazesikk).
